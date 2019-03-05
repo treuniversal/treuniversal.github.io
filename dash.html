@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text|Quicksand' rel='stylesheet' type='text/css'>
+
+
+
+<style>
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0 auto;
+  background: #800020;
+  background: url('https://image.freepik.com/free-photo/high-angle-view-fresh-vegetables-white-background_23-2147885921.jpg');
+      background-size: cover;
+      color: white;
+
+}
+div {
+  height: 300px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+  max-width: 800px;
+  margin:50 auto;
+}
+h1 {
+  font-family: 'Libre Barcode 128 Text', sans-serif;
+  text-align: center;
+  font-size: 75px;
+  color: #000;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #000;
+  margin: 0px 0 70px 0;
+
+}
+p {
+  color: rgba(211,211,211, 0.8);
+  background: white;
+  background: linear-gradient(bottom, rgba(9,9,9,1), rgba(23,23,86,.4));
+  background: -webkit-linear-gradient(bottom, rgba(9,9,9,.200), rgba(900,20,88,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 6px;
+  line-height: 27px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+.price {
+  float: right;
+}
+  ul {
+    padding: 10px;
+    background: rgba(0,0,0,.3);
+    text-align: center; 
+    
+    }
+    
+  li {
+    display: inline;
+    padding: 0px 100px 0px 1px;
+    }
+    
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  
+  }    
+  h1 {
+    font-size: 60px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+ <ul>
+      <li><button onclick=appetizers()>Appetizers</button></li>
+      <li><button onclick=entrees()> Entrees</button></li>
+      <li><button onclick=desserts()> Desserts</button></li>
+ </ul>
+
+<h1>tristan's buffet</h1>
+<h2>Get yo morning right.</h2>
+
+<div id="Delectable"></div> 
+
+
+<script>
+
+
+appetizers_Images = [
+  
+  
+              'url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/StJXJ2YPliygt86rx/videoblocks-buffet-with-snacks-at-the-outdoor-event-buffet-with-appetizers-outdoors_hk-jzsck_thumbnail-full01.png")',
+				      'url("https://ak4.picdn.net/shutterstock/videos/12790514/thumb/1.jpg")',
+				      'url("https://images.unsplash.com/photo-1527751171053-6ac5ec50000b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80")',
+]
+
+entrees_Images = [
+              'url("https://www.vegetariantimes.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTQ3MDM4NTA3OTA1MzI4ODc5/gyros2_2000_1125.jpg")',
+				      'url("https://img.taste.com.au/Gyrlve4B/taste/2016/11/greek-chicken-gyros-with-yoghurt-sauce-108192-1.jpeg")',
+				      'url("https://www.beefobradys.com/images/entrees-grilled-shrimp.jpg")',
+]
+
+desserts_Images = [
+              'url("https://media4.s-nbcnews.com/j/MSNBC/Components/Video/201707/tdy_take_food_170726_2.today-inline-vid-featured-desktop.jpg")',
+				      'url("https://i.dietdoctor.com/wp-content/uploads/2018/07/DD_LC_Desserts_feature.jpg?auto=compress%2Cformat&w=1600&h=900&fit=crop")',
+				      'url("https://images-gmi-pmc.edge-generalmills.com/b412104b-a8f1-4c80-a23f-e2e4047d2d57.jpg")',
+]
+
+appetizersDivs = [
+'<div class="item"><p> sausage kabob <span class="price">$29 (plus tax)</span><br /><small> A true display of favors, especially in the sausage. It is smoked with pepper, and a zest of lemon to top it off. </small></p></div>',
+
+
+'<div class="item"><p> fresh fruits <span class="price">$5 per cup </span><br /><small> Fresh fruits from a Virgina garden barn. Grown freshly with no pesticides what so ever.ﾟ</small></p></div>',
+
+'<div class="item"><p> french almond cubes <span class="price">$5 (plus tax)</span><br /><small> Almonds at it\'\s finest. Wrapped in a cucumber layer is basil, jack cheese, and smoked pepper.</small></p></div>'
+]
+
+entreesDivs = [
+'<div class="item"><p> vegetarian egg sandwich <span class="price">$31 (plus tax)</span><br /><small> Onions, tomatoes, lettuce and mayo all packaged in a toasted coat of italian bread.</small></p></div>',
+
+
+'<div class="item"><p> torilla bread with baked pieces of chicken <span class="price">$44 (plus tax)</span><br /><small> Baked torilla bread, sandwiched with grilled chicken bits. Garnished with organic olive oil. </small></p></div>',
+
+'<div class="item"><p> salmon w/ rice and BBQ sauce<span class="price">$53 (plus tax)</span><br /><small> Eating salmon is a great way to start your day. The proteins found in it are very beneficial. Whole grain rice is topped with oven-baked salmon. These salmon are wild catch. BBQ sauce to top it off.</small></p></div>'
+]
+
+dessertsDivs = [
+'<div class="item"><p> peanut butter, cream cheese and grape jam w/ toasted bread <span class="price">$21 (plus tax)</span><br /><small> Jam made with organic fruit (strawberry), sugar and pectin. Bread is then toasted to perfect and merged with the grape jam and cream cheese.</small></p></div>',
+
+
+'<div class="item"><p> strawberry mousse <span class="price">$29 (plus tax)</span><br /><small> Nutrient filled vanilla, blended with sugar, egg yolks, heavy cream and 7 bits of strawberry. Garnished with whipped cream. Sweetened to gratify taste. </small></p></div>',
+
+'<div class="item"><p>strawberry chocolate cake <span class="price">$24 (plus tax)</span><br /><small>Strawberry chocolate cake at it\'\s finest. Strawberries are dipped into white and dark chocolate. Covered in dark chocolate. </small></p></div>'
+]
+
+function appetizers() {
+  aromatic = document.getElementById("Delectable")
+  aromatic.innerHTML = ''
+  aromatic.innerHTML +=appetizersDivs[0]
+  aromatic.innerHTML +=appetizersDivs[1]
+  aromatic.innerHTML +=appetizersDivs[2]
+	//alert("Appetizers has been selected.")
+	items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+		items[i].style.background = appetizers_Images[i]
+		items[i].style.backgroundSize = '135% 160%'
+  } 
+} 
+
+function entrees() {
+  aromatic = document.getElementById("Delectable")
+  aromatic.innerHTML = ''
+  aromatic.innerHTML +=entreesDivs[0]
+  aromatic.innerHTML +=entreesDivs[1]
+  aromatic.innerHTML +=entreesDivs[2]
+  //alert("Entrees has been selected.")
+  items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+		items[i].style.background = entrees_Images[i]
+		items[i].style.backgroundSize = '135% 190%'
+	
+  }
+}
+
+function desserts() {
+  aromatic = document.getElementById("Delectable")
+  aromatic.innerHTML = ''
+  aromatic.innerHTML +=dessertsDivs[0]
+  aromatic.innerHTML +=dessertsDivs[1]
+  aromatic.innerHTML +=dessertsDivs[2]
+	//alert("Desserts has been selected.")
+	items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+		items[i].style.background = desserts_Images[i]
+		items[i].style.backgroundSize = '135% 160%'
+  }
+}
+
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
