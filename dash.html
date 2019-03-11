@@ -175,7 +175,7 @@ dessertsDivs = [
 
 '<div class="item" onclick=this.classList.toggle("show-description")><p> strawberry mousse <span class="price">$29 (plus tax)</span><br /><small> Nutrient filled vanilla, blended with sugar, egg yolks, heavy cream and 7 bits of strawberry. Garnished with whipped cream. Sweetened to gratify taste. </small></p></div>',
 
-'<div class="item" onclick=this.classList.toggle("show-description")><p>strawberry chocolate cake <span class="price">$24 (plus tax)</span><br /><small>Strawberry chocolate cake at it\'\s finest. Strawberries are dipped into white and dark chocolate. Covered in dark chocolate. </small></p></div>'
+'<div class="item" onclick=this.classList.toggle("show-description")><p>strawberry chocolate cake <span class="price">$24 (plus tax)</span><br /><small>Strawberry chocolate cake at it\'\s finest. Strawberries are dipped into white and dark chocolate. Covered in dark chocolate. </small></p></div>',
 '<div class="item" onclick=this.classList.toggle("show-description")><p>chocolate trifle <span class="price">$19 (plus tax)</span><br /><small>Made with brownie mix, thawed whipped cream, homemade pudding, and english toffee flavored-candy bars. </small></p></div>'	
 	
 ]
@@ -202,7 +202,7 @@ function entrees() {
   aromatic.innerHTML +=entreesDivs[2]
   //alert("Entrees has been selected.")
   items = document.getElementsByClassName("item")
-  for (i=0; i<3; i=i+1) {
+  for (i=0; i<4; i=i+1) {
 		items[i].style.background = entrees_Images[i]
 		items[i].style.backgroundSize = '135% 190%'
 	
