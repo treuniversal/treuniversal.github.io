@@ -13,19 +13,6 @@
   firebase.initializeApp(firebaseConfig);
 </script>
 
-// Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyBQfBLqgcWoUDMUIMoAJc3E_03q3JPZWxc",
-    authDomain: "tristancomputer-2def4.firebaseapp.com",
-    databaseURL: "https://tristancomputer-2def4.firebaseio.com",
-    projectId: "tristancomputer-2def4",
-    storageBucket: "tristancomputer-2def4.appspot.com",
-    messagingSenderId: "992284587844",
-    appId: "1:992284587844:web:4b875f82b9f01ebb"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
 let database = firebase.database()
   
 let scoreboard ={ }
