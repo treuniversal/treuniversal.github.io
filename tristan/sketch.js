@@ -77,17 +77,18 @@ if (touches.length == 0)   {
   if (keyIsDown(DOWN_ARROW)) {
     y = y + 6
   }
+}
+	
+else { 
+     x = touches[0].x
+     y = touches[0].y
+}
+
 
   if (dist(x*s, y, a*s, e) < 120*s + 20*s) {
 	lives= lives + 1
   }
-}
 	
-else { 
-     470 = touches[0].x
-     370 = touches[0].y
-}
-
 
 if ( lives > 10 && level == 1) {
 o = [2, 190, 83, 226] 
