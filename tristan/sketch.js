@@ -1,9 +1,4 @@
-
-
-
-
-
-  // Your web app's Firebase configuration
+ // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyBQfBLqgcWoUDMUIMoAJc3E_03q3JPZWxc",
     authDomain: "tristancomputer-2def4.firebaseapp.com",
@@ -65,6 +60,7 @@ if (time > 0) {
   fill(183,65,10);
   circle(x*s,y,30*s)
   
+if (touches.length == 0)   {
 
   if (keyIsDown(LEFT_ARROW)) {
     x = x - 6
@@ -85,6 +81,13 @@ if (time > 0) {
   if (dist(x*s, y, a*s, e) < 120*s + 20*s) {
 	lives= lives + 1
   }
+}
+	
+else { 
+     470 = touches[0].x
+     370 = touches[0].y
+}
+
 
 if ( lives > 10 && level == 1) {
 o = [2, 190, 83, 226] 
