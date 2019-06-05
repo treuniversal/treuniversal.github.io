@@ -2,13 +2,12 @@ html, body {
   margin: 0;
   padding: 0;
   position: fixed; 
-	overflow: hidden; 
+  overflow: hidden; 
   overscroll-behavior: none;
 }
 #responseh, #responseh input, button {
 	font-size: 120%;
 }
-
 canvas {
   display: block;
 }
