@@ -77,7 +77,9 @@ if (touches.length == 0)   {
 
   if (keyIsDown(DOWN_ARROW)) {
     y = y + 6
+   }
   }
+ }
 }
 	
 else { 
