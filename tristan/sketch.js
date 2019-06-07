@@ -35,7 +35,7 @@ let direction_h=[1,1,1,1]
 let direction_h2 = 1
 let direction_v2 = 1
 
-let time= 2
+let time= 60
 
 let lives;
 lives=10
