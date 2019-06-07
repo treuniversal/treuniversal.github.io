@@ -77,8 +77,6 @@ if (touches.length == 0)   {
     y = y + 6
    }
   }
- }
-}
 	
 else { 
      x = touches[0].x
