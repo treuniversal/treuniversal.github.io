@@ -171,8 +171,9 @@ level = 6
 }
 
 	function restart() { 
-        let givename = document.getElementById("givename")
+      	let givename = document.getElementById("givename")
 		name = givename.value 
+		database.ref(name).set(score)
 		if (name != "") { 
 			scoreboard[name] = lives
 			database.ref(name).set(score)
