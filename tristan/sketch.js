@@ -173,10 +173,9 @@ level = 6
 	function restart() { 
       	let givename = document.getElementById("givename")
 		name = givename.value 
-		database.ref(name).set(score)
+		database.ref(name).set(lives)
 		if (name != "") { 
 			scoreboard[name] = lives
-			database.ref(name).set(score)
 		}
         alert("Scoreboard:" + JSON.stringify(scoreboard,null,1)) 
 		time = 60
