@@ -26,8 +26,8 @@ let y=370
 let a=233
 let e=346
 
-let p = [ 103, 75, 4, 142]
-let o = [ 132, 23, 122, 300] 
+let p = [81, 154, 104, 166]
+let o = [8, 51, 22, 300] 
 
 let direction_v=[1,1,1,1]
 let direction_h=[1,1,1,1]
@@ -54,6 +54,7 @@ if (time > 0) {
   textSize(26)
   text("Lives: " + lives, 100, 100)
   text("Time: " + time.toFixed(0), 100, 125)
+  text("Level: " + level.toFixed(0), 100, 150)
   time = time - 0.02
   
   fill(183,65,10);
@@ -89,43 +90,57 @@ else {
   }
 	
 
-if ( lives > 10 && level == 1) {
+if ( lives > 100 && level == 1) {
 o = [2, 190, 83, 226] 
-eRadius = eRadius - 27
+eRadius = eRadius + 10
 nitro = nitro + 1
 level = 2
 }
 
-if ( lives > 8 && level == 2) {
-eRadius = eRadius + 3
+if ( lives > 200 && level == 2) {
+eRadius = eRadius + 25
 o = [212, 142, 45, 103]
 nitro = nitro + 3
 level = 3  
 }
 
-if ( lives > 6 && level == 3) {
-eRadius = eRadius + 5
+if ( lives > 300 && level == 3) {
+eRadius = eRadius + 40
 o = [283, 100, 228, 157] 
 nitro = nitro + 5
 level = 4
 }
   
-if ( lives > 4 && level == 4) {
-eRadius = eRadius + 10
+if ( lives > 400 && level == 4) {
+eRadius = eRadius + 55
 o = [72, 210, 294, 120] 
 nitro = nitro + 7
+a = a-4
+e = e-4
 level = 5
 }
-
-if ( lives > 2 && level == 5) {
-eRadius = eRadius + 14
-o = [241, 97, 122, 64] 
+  
+if ( lives > 500 && level == 5) {
+eRadius = eRadius + 70
+o = [33, 139, 162, 101] 
 nitro = nitro + 9
 level = 6
 }
 
+if ( lives > 600 && level == 6) {
+eRadius = eRadius + 85
+o = [241, 97, 122, 64] 
+nitro = nitro + 9
+level = 7
+}
 
-  
+if ( lives > 600 && level == 7) {
+eRadius = eRadius + 100
+o = [74, 46, 54, 193] 
+nitro = nitro + 9
+level = 7
+}
+
   for (i=0; i<4; i=i+1) {
     
         if (dist(x*s, y, p[i]*s, o[i]) < 120*s + 10*s) {
