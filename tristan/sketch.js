@@ -115,8 +115,6 @@ if ( lives > 400 && level == 4) {
 eRadius = eRadius + 55
 o = [72, 210, 294, 120] 
 nitro = nitro + 7
-a = a-4
-e = e-4
 level = 5
 }
   
@@ -147,7 +145,7 @@ level = 7
         lives= lives - 1
         }
 
-        fill(178,34,34);
+        fill(153,0,0);
         circle(p[i]*s,o[i],eRadius*s)
 
         p[i] = p[i] - nitro *direction_h[i]
@@ -161,7 +159,7 @@ level = 7
       }
   }
 
-  fill(228,132,0);
+  fill(153,0,0);
   circle(a*s,e,20 *s)
     
   a = a + 6*direction_h2
