@@ -50,14 +50,14 @@ function setup() {
 function draw() {
   
 if (time > 0) {
-  background(120);
-  textSize(26)
+  background(110);
+  textSize(30)
   text("Lives: " + lives, 100, 100)
   text("Time: " + time.toFixed(0), 100, 125)
   text("Level: " + level.toFixed(0), 100, 150)
   time = time - 0.02
   
-  fill(183,65,10);
+  fill(255,255,255);
   circle(x*s,y,30*s)
   
 if (touches.length == 0)   {
@@ -159,7 +159,7 @@ level = 7
       }
   }
 
-  fill(153,0,0);
+  fill(218,165,32);
   circle(a*s,e,20 *s)
     
   a = a + 6*direction_h2
