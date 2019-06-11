@@ -1,4 +1,5 @@
- 
+let Booper
+Booper = createImg(“whyte-d.gif”) 
 // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyBQfBLqgcWoUDMUIMoAJc3E_03q3JPZWxc",
