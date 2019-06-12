@@ -47,6 +47,9 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   s = width/897
   Booper = createImg("whyte-d.gif") 
+	
+  for (i=0; i<4; i=i+1) {
+  	droplets.push(createImg("oof.gif"))
 }
 
 function draw() {
