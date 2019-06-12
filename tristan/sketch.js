@@ -1,5 +1,4 @@
 let Booper
-Booper = createImg(“whyte-d.gif”) 
 // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyBQfBLqgcWoUDMUIMoAJc3E_03q3JPZWxc",
@@ -40,13 +39,14 @@ let direction_v2 = 1
 let time= 60
 
 let lives;
-lives=10
+lives=0
 
 let level= 1
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   s = width/897
+  Booper = createImg(“whyte-d.gif”) 
 }
 
 function draw() {
@@ -59,6 +59,9 @@ if (time > 0) {
   text("Level: " + level.toFixed(0), 100, 150)
   time = time - 0.02
   
+  Booper.size(2*x*s, 2*y*s)
+  Booper.position((x - Booper.width/2)*s, y - Booper.height/2)
+
   fill(255,255,255);
   circle(x*s,y,30*s)
   
@@ -91,6 +94,7 @@ else {
 	lives= lives + 1
   }
 	
+
 
 if ( lives > 100 && level == 1) {
 o = [2, 190, 83, 226] 
