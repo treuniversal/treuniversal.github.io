@@ -59,11 +59,10 @@ if (time > 0) {
   text("Level: " + level.toFixed(0), 100, 150)
   time = time - 0.02
   
-  Booper.size(2*x*s, 2*y*s)
+  Booper.size(2*30*s, 2*30*s)
   Booper.position((x - Booper.width/2)*s, y - Booper.height/2)
 
   fill(255,255,255);
-  circle(x*s,y,30*s)
   
 if (touches.length == 0)   {
 
